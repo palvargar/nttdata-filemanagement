@@ -11,6 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - DataAccess Tier", "3 - 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NttData.FileManagement.Presentation.WinSite", "NttData.FileManagement.Presentation.WinSite\NttData.FileManagement.Presentation.WinSite.csproj", "{E5876547-80F2-4B9A-9ACE-1A0CBA3929DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Common Tier", "4 - Common Tier", "{EEA172B0-904D-4789-883C-5FA2334E342D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NttData.FileManagement.Business.Logic", "NttData.FileManagement.Business.Logic\NttData.FileManagement.Business.Logic.csproj", "{0033F575-B3F8-4779-8992-44CC28CEFFFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NttData.FileManagement.DataAccess.Repository", "NttData.FileManagement.DataAccess.Repository\NttData.FileManagement.DataAccess.Repository.csproj", "{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NttData.FileManagement.Common.Model", "NttData.FileManagement.Common.Model\NttData.FileManagement.Common.Model.csproj", "{BF1B270A-79CB-4016-83E8-F67C7FEC1F98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +29,27 @@ Global
 		{E5876547-80F2-4B9A-9ACE-1A0CBA3929DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5876547-80F2-4B9A-9ACE-1A0CBA3929DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5876547-80F2-4B9A-9ACE-1A0CBA3929DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0033F575-B3F8-4779-8992-44CC28CEFFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0033F575-B3F8-4779-8992-44CC28CEFFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0033F575-B3F8-4779-8992-44CC28CEFFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0033F575-B3F8-4779-8992-44CC28CEFFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1B270A-79CB-4016-83E8-F67C7FEC1F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1B270A-79CB-4016-83E8-F67C7FEC1F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1B270A-79CB-4016-83E8-F67C7FEC1F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1B270A-79CB-4016-83E8-F67C7FEC1F98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E5876547-80F2-4B9A-9ACE-1A0CBA3929DF} = {52ABE880-34BF-4F3B-9FC1-44632ED021CA}
+		{0033F575-B3F8-4779-8992-44CC28CEFFFB} = {2DF7106B-E2FB-42AF-8FF5-828892861679}
+		{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C} = {58A58932-FEA4-4ADC-8213-E47119D5E70B}
+		{BF1B270A-79CB-4016-83E8-F67C7FEC1F98} = {EEA172B0-904D-4789-883C-5FA2334E342D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB5FCBFC-539D-408B-A97E-03E955AA2972}
