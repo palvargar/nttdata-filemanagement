@@ -2,6 +2,7 @@
 using NttData.FileManagement.Business.Logic.Implementations;
 using NttData.FileManagement.Common.Model;
 using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace NttData.FileManagement.Presentation.WinSite
@@ -23,11 +24,12 @@ namespace NttData.FileManagement.Presentation.WinSite
             IStudentService studentService= new StudentService();
             Student student = new Student();
 
-            studentService.Add(student);
             student.Id = int.Parse(txtId.Text);
             student.Name = txtName.Text;
             student.Surname = txtSurname.Text;
-            //student.Birthday = txtBirthday.Text.ToString("dd/MM/yyyy");
+            student.Birthday = DateTime.ParseExact(txtBirthday.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            studentService.Add(student);
 
             MessageBox.Show("The student is saved");
         }
