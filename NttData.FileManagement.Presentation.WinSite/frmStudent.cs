@@ -27,7 +27,7 @@ namespace NttData.FileManagement.Presentation.WinSite
             student.Id = int.Parse(txtId.Text);
             student.Name = txtName.Text;
             student.Surname = txtSurname.Text;
-            student.Birthday = DateTime.ParseExact(txtBirthday.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            student.Birthday = DateTime.ParseExact(txtBirthday.Text, "dd/MM/yy", CultureInfo.InvariantCulture).Date;
 
             studentService.Add(student);
 
