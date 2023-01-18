@@ -13,7 +13,7 @@ namespace NttData.FileManagement.DataAccess.Repository.Implementations
     {
         public bool Add(Student student)
         {
-            File.AppendAllText(@"E:\Formacion\Proyectos\NttData.FileManagement\NttData.FileManagement.Presentation.WinSite\bin\Debug\File.txt", student.ToString());
+            File.AppendAllText(@"E:\Formacion\Proyectos\NttData.FileManagement\NttData.FileManagement.Presentation.WinSite\bin\Debug\File.txt", student.ToString() + "\n");
             return true;
         }
     }
