@@ -2,6 +2,7 @@
 using NttData.FileManagement.DataAccess.Repository.Contracts;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ namespace NttData.FileManagement.DataAccess.Repository.Implementations
     {
         public bool Add(Student student)
         {
-            File.AppendAllText(@"E:\Formacion\Proyectos\NttData.FileManagement\NttData.FileManagement.Presentation.WinSite\bin\Debug\File.txt", student.ToString() + "\n");
+            File.AppendAllText(@ConfigurationManager.AppSettings.Get("StudentsFilePath"), student.ToString() + "\n");
+
             return true;
         }
     }
