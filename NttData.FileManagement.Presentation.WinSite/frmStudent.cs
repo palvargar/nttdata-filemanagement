@@ -2,6 +2,7 @@
 using NttData.FileManagement.Business.Logic.Implementations;
 using NttData.FileManagement.Common.Model;
 using System;
+using System.Configuration;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -16,7 +17,8 @@ namespace NttData.FileManagement.Presentation.WinSite
 
         private void frmStudent_Load(object sender, EventArgs e)
         {
-
+            string sAttr = @ConfigurationManager.AppSettings.Get("StudentsFilePath");
+            MessageBox.Show(sAttr);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
