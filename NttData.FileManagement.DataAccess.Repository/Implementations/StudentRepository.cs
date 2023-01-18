@@ -14,8 +14,13 @@ namespace NttData.FileManagement.DataAccess.Repository.Implementations
     {
         public bool Add(Student student)
         {
-            File.AppendAllText(@ConfigurationManager.AppSettings.Get("StudentsFilePath"), student.ToString() + "\n");
+            var path = @ConfigurationManager.AppSettings.Get("StudentsFilePath");
 
+            using (FileStream aFile = new FileStream(path, FileMode.Append, FileAccess.Write))
+            using (StreamWriter sw = new StreamWriter(aFile))
+            {
+                sw.WriteLine(student.ToString());
+            }
             return true;
         }
     }
