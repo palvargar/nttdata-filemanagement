@@ -65,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NttData.FileManagement.Common.Model\NttData.FileManagement.Common.Model.csproj">
+      <Project>{bf1b270a-79cb-4016-83e8-f67c7fec1f98}</Project>
+      <Name>NttData.FileManagement.Common.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NttData.FileManagement.DataAccess.Repository\NttData.FileManagement.DataAccess.Repository.csproj">
       <Project>{2A0BF8C3-CB09-4A38-A320-B03CDFA9076C}</Project>
       <Name>NttData.FileManagement.DataAccess.Repository</Name>
