@@ -33,17 +33,11 @@ namespace NttData.FileManagement.DataAccess.Repository.Implementations.Implement
 
             var path = @ConfigurationManager.AppSettings.Get("StudentsFilePath");
 
-            using (FileStream aFile = new FileStream(path, FileMode.Append, FileAccess.Write))
-            using (StreamWriter sw = new StreamWriter(aFile))
-            {
-                sw.WriteLine(student1.ToString());
-            }
-
             student2 = ReadStudent(path);
 
             Assert.AreEqual(student1, student2);
 
-            File.Delete(@ConfigurationManager.AppSettings.Get("StudentsFilePath"));
+            DeleteFile(path);
 
             Assert.IsTrue(!File.Exists(@ConfigurationManager.AppSettings.Get("StudentsFilePath")));
         }
@@ -72,6 +66,11 @@ namespace NttData.FileManagement.DataAccess.Repository.Implementations.Implement
             }
 
             return student;
+        }
+
+        private void DeleteFile(string path)
+        {
+            File.Delete(path);
         }
     }
 }
